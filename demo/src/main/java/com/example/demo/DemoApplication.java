@@ -26,7 +26,7 @@ public class DemoApplication {
 		{
 			//Menu.txt contains data
 		Scanner scanner=new Scanner(new ClassPathResource("Menu.txt").getFile());
-		lineData=scanner.nextLine().split(",");
+		lineData=scanner.nextLine().split(" ");
 		// Max time godmon can spare in eating in minutes passed in first line of file
 		int minuts = Integer.parseInt(lineData[0]);
 		// No of Total menu Items passed in first line of file
@@ -37,7 +37,7 @@ public class DemoApplication {
 		while(scanner.hasNextLine())
 		{
 			dishNum++;
-			lineData=scanner.nextLine().split(",");
+			lineData=scanner.nextLine().split(" ");
 			//parsing amount of satisfaction for each dish
 			amountOfSatisfaction=Integer.parseInt(lineData[0]);
 			//parsing time to eat for each dish
